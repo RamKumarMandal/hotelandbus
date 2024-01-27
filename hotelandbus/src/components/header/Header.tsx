@@ -1,14 +1,36 @@
 import React from 'react'
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import 'react-date-range/dist/styles.css' // main css file
+import 'react-date-range/dist/theme/default.css' // theme css file
+import { DateRange } from 'react-date-range'
+import { format } from 'date-fns'
+
 import {
   faBed,
+  faCalendarDays,
   faCar,
+  faPerson,
   faPlane,
   faTaxi,
 } from '@fortawesome/free-solid-svg-icons'
-
+import { useState } from 'react'
 const Header = () => {
+  const [openDate, setOpenDate] = useState(false)
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: 'selection',
+    },
+  ])
+  const [openOptions, setOpenOptions] = useState(false)
+  const [options, setOptions] = useState({
+    adult: 1,
+    children: 0,
+    room: 1,
+  })
+
   return (
     <div className="header">
       <div className="headerContainer">
@@ -40,6 +62,44 @@ const Header = () => {
           with free HotelBooking Account
         </p>
         <button className="headerbtn">Sign in / Register</button>
+        <div className="headerSearch">
+          <div className="headerSearchItem">
+            <FontAwesomeIcon icon={faBed} className="headerIcon" />
+            <input
+              type="text"
+              placeholder="where are you going?"
+              className="headerSearchInput"
+            />
+          </div>
+          <div className="headerSearchItem">
+            <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
+            <span
+              onClick={() => setOpenDate(!openDate)}
+              className="headerSearchText">{`${format(
+              date[0].startDate,
+              'MM/dd/yyyy',
+            )} to ${format(date[0].endDate, 'MM/dd/yyyy')} `}</span>
+            {openDate && (
+              <DateRange
+                editableDateInputs={true}
+                onChange={(item) => setDate([item.selection])}
+                moveRangeOnFirstSelection={false}
+                ranges={date}
+                className="date"
+              />
+            )}
+          </div>
+          <div className="headerSearchItem">
+            <FontAwesomeIcon icon={faPerson} className="headerIcon" />
+            <span className="headerSearchText">{`${options.adult} adult.${options.children} children.${options.room} room`}</span>
+            <div className="options">
+              <div className="optionItem">span.</div>
+            </div>
+          </div>
+          <div className="headerSearchItem">
+            <button className="headerbtn">Search</button>
+          </div>
+        </div>
       </div>
     </div>
   )
