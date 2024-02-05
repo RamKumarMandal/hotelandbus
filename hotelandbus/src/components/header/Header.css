@@ -79,5 +79,39 @@ margin: 20px 0px;
 .date{
     position: absolute;
     top: 50px;
+    z-index: 1;
+}
+
+.options{
+    position:absolute;
+    top: 50px;
+    border: 1px solid #0071c2;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+}
+
+.optionItem{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.counterOption{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.optionCounterBtn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0071c2;
+    color: #0071c2;
+    cursor: pointer;
+    background-color: white;
 }
 
