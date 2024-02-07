@@ -1,8 +1,10 @@
-import React from 'react'
-import Nav from '../components/navbar/Nav'
-import Header from '../components/header/Header'
-import Featured from '../components/featured/Featured'
 import './Home.css'
+
+import React from 'react'
+
+import Featured from '../components/featured/Featured'
+import Header from '../components/header/Header'
+import Nav from '../components/navbar/Nav'
 
 const Home = () => {
   return (
