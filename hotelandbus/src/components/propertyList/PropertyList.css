@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .pListItem{
@@ -18,4 +19,16 @@
     width: 100%;
     height: 150px;
     object-fit: cover;
+}
+
+.title{
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.ptype{
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 12px;
 }
