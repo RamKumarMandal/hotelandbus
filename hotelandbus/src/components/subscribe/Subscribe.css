@@ -1,0 +1,41 @@
+.sub{
+    display: flex;
+    width: 100%;
+    background-color:#00224f;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: white;
+    gap: 20px;
+}
+.subTitle>h2{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.subAim{
+    font-size: 14px;
+}
+.subInputButton{
+    display: flex;
+}
+.subInputButton>input{
+    font-size: 20px;
+    color: #6b6b6b;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 100;
+    padding: 10px;
+    width: 75%;
+}
+
+.subInputButton>button{
+    font-size: 20px;
+    line-height: 28px;
+    padding:10px;
+    margin:3px;
+    border:none;
+    background-color: #006CE4;
+    color: white;
+}

@@ -7,6 +7,7 @@ import Header from '../components/header/Header'
 import Nav from '../components/navbar/Nav'
 import PropertyList from '../components/propertyList/PropertyList'
 import FeaturedProperties from '../components/featuredProperties/FeaturedProperties'
+import Subscribe from '../components/subscribe/Subscribe'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <PropertyList />
         <h1 className="homeTitle">Homes Guests Love</h1>
         <FeaturedProperties />
+        <Subscribe />
       </div>
     </div>
   )
