@@ -3,10 +3,11 @@ import './Home.css'
 import React from 'react'
 
 import Featured from '../components/featured/Featured'
+import FeaturedProperties from '../components/featuredProperties/FeaturedProperties'
+import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 import Nav from '../components/navbar/Nav'
 import PropertyList from '../components/propertyList/PropertyList'
-import FeaturedProperties from '../components/featuredProperties/FeaturedProperties'
 import Subscribe from '../components/subscribe/Subscribe'
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
         <h1 className="homeTitle">Homes Guests Love</h1>
         <FeaturedProperties />
         <Subscribe />
+        <Footer />
       </div>
     </div>
   )

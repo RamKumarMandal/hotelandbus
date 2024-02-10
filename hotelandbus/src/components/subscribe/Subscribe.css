@@ -32,10 +32,11 @@
 
 .subInputButton>button{
     font-size: 20px;
-    line-height: 28px;
     padding:10px;
     margin:3px;
     border:none;
     background-color: #006CE4;
     color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
