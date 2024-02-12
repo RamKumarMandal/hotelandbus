@@ -19,8 +19,60 @@
     position: sticky;
     top:10px;
     height: fit-content;
+    width: fit-content;
+}
+.lsItem{
+    display: flex;
+    flex-direction: column;
 }
 
+.lsItem>span{
+    background-color: white;
+    height: 25px;
+    width: 95%;
+    padding: 5px;
+    margin: 5px;
+   cursor: pointer;
+}
+
+.lsOptionItem{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.lsOptionItem>label{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.lsOptionItem>input{
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 20%;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.listDate{
+    z-index: 2;
+}
+.lsItem>input{
+    border: none;
+    height: 25px;
+    padding: 5px;
+    margin: 5px;
+    width: 95%;
+}
+
+.listSearch>button{
+    padding: 10px;
+    border: none;
+    background-color: #0071c2;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+}
 .listResults{
     flex:3;
 }
