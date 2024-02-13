@@ -22,7 +22,9 @@ const Home = () => {
         <h1 className="homeTitle">Homes Guests Love</h1>
         <FeaturedProperties />
         <Subscribe />
-        <Footer />
+        <div className="footerwraphome">
+          <Footer />
+        </div>
       </div>
     </div>
   )

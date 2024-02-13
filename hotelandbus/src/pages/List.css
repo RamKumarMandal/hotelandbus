@@ -71,8 +71,19 @@
     width: 100%;
     color: white;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: bold;
 }
 .listResults{
     flex:3;
+}
+
+.footerwrap{
+    position:sticky;
+    bottom: -1px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0071c2;
+     color:white;
 }

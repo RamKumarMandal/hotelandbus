@@ -1,30 +1,37 @@
 .footer{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     font-size: 12px;
     max-width: 1024px;
+    justify-content: center;
+    align-items: center;
 }
 
 .fLists{
     width: 100%;
+    max-width: 1024px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    align-items: center;
+    text-align: center;
 }
 
 
 .fList{
     list-style: none;
-    padding: 0;
     line-height:25px;
+    color: white;
 }
 
 .fListItem{
     cursor: pointer;
-    color: #00224f;
+    color:white;
     font-size: 12px;
+
 }
 
 .fListItem:hover{
-color:blueviolet;
+color:red;
 font-size: 15px;
 }

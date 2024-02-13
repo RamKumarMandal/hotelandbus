@@ -9,6 +9,8 @@ import Header from '../components/header/Header'
 import Nav from '../components/navbar/Nav'
 import { format } from 'date-fns'
 import SearchItem from '../components/searchItem/SearchItem'
+import Subscribe from '../components/subscribe/Subscribe'
+import Footer from '../components/footer/Footer'
 
 const List = () => {
   const location = useLocation()
@@ -20,6 +22,7 @@ const List = () => {
   return (
     <div>
       <Nav />
+
       <Header type="list" />
       <div className="listContainer">
         <div className="listWrapper">
@@ -30,7 +33,7 @@ const List = () => {
               <input name="destination" type="text" placeholder={destination} />
             </div>
             <div className="lsItem">
-              <label htmlFor="checkInDate">checkInDate</label>
+              <label htmlFor="checkInDate">check In Date</label>
               <span onClick={() => setOpenDate(!openDate)}>{`${format(
                 date[0].startDate,
                 'MM/dd/yyyy',
@@ -47,7 +50,7 @@ const List = () => {
               )}
             </div>
             <div className="lsItem">
-              <label>options</label>
+              <label>Options</label>
               <div className="lsOptionItem">
                 <span className="lsOptionText">Min Price per night</span>
                 <input type="number" className="lsOptionInput" min={0} />
@@ -99,6 +102,9 @@ const List = () => {
             <SearchItem />
           </div>
         </div>
+      </div>
+      <div className="footerwrap">
+        <Footer />
       </div>
     </div>
   )
